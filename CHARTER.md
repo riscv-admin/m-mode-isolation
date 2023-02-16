@@ -1,37 +1,17 @@
-# {{ New Group Name }} {{ New Group Type }} Charter
+# M-mode Isolation TG Charter
 
-## Directions for creating a charter
-The information in this file should be created as part of the group formation and approved by your sponsoring group.  See the [Chairs Best Practices policy](https://docs.google.com/document/d/1rtXskVd7YyFq74tQ2OrInyM_-OQa228R5UZs5Pm3Vz0/) for more details.
+This task group is developing a Privileged ISA extension to support isolation (memory and CSRs) between multiple workloads all written to run in M-mode. Potential use cases, requirements, and assumptions will be collected and analyzed. The extension will scale across all RISC-V cores from low-end microcontrollers (RVM profile) to high-end applications processors (RVA profile). The impetus for M-mode isolation stems from scenarios where multiple low-level machine-dependent M-mode software workloads run on the same processor. These multiple workloads require isolation from each other to meet security and/or reliability requirements. There can be multiple entities in a supply-chain such as SoC designer and OEM or even multiple groups within the same company developing M-mode workloads. In another scenario, there is the desire to reduce the attack surface of M-mode software by only running a subset of the software in M-mode. This implies the remainder of the M-mode software is ported to run in existing lower-privilege modes (called de-privileging). The software development effort to de-privilege existing M-mode software to improve security is a competitive disadvantage of RISC-V relative to other ISAs.
 
-A good Task Group (TG) charter describes how it achieves filling in a gap defined by the Special Interest Group (SIG) or Committee that spawned it (directly or dotted line). It lists the specific small set of  deliverables it will deliver.
+The M-mode Isolation TG will deliver a Priviledged ISA extension that provides M-mode Isolation for existing and new software.
 
-A SIG is an extension of a Committee, in that its only deliverables are strategy, gaps, and prioritizations, and helping spawn other SIGs or TGs to fill the gaps. A good SIG charter spells out the small set of topic areas their strategy will address along with its responsibilities as laid out in this bullet.
+The following items are presently not planned to be delivered as part of this work:
 
-In the next section is a raw template.  Delete the section header and substitute appropriate text in for [ALL CAPS ITEMS AS DESCRIBED].
+ 1. Domain (AKA World) isolation within a Hart and within an SoC
 
-**Delete this whole section when done.**
+To achieve its goals, the M-mode Isolation TG will interact with the following groups:
 
-## Raw template
-
-The {{ New Group Name }} {{ New Group Type }} will [OVERALL MISSION STATEMENT in 2-3 
-SENTENCES]
-
-[THIS PARAGRAPH IS OPTIONAL]
-The [TERM 1] IS [DEFINITION 1].  [EXPLANATION  OF IMPORTANCE OF TERM 1]. [MORE TERMS AND DEFINITIONS AS NEEDED]
-
-[BACKGROUND INFORMATION ABOUT RELEVANCE OF GROUP/TECHNOLOGY]
-
-The {{ New Group Name }} {{ New Group Type }} will [DELIVER SOMETHING] [WITH THESE ATTRIBUTES]:
-
- - [ATTRIBUTE 1]
- - [ATTRIBUTE 2]
- - [... AS NEEDED]
-
-[THIS PARAGRAPH AND LIST ARE OPTIONAL, ESPECIALLY IF THE LIST IS EMPTY]
-The following items are presently not planned to be delivered as part of this work, but may be considered in future versions:
-
- 1. [FEATURE 1]
- 1. [FEATURE 2]
- 1. [... AS NEEDED]
-
-To achieve its goals, the {{ New Group Name }} {{ New Group Type }}, will interact with the following groups: [GROUP NAME 1] [GROUP TYPE 1], [GROUP NAME 2] [GROUP TYPE 2], [...] and [GROUP NAME N] [GROUP TYPE N]. 
+ 1. Security HC
+ 2. Runtime Integrity SIG
+ 3. Trusted Compute SIG
+ 4. AP-TEE TG
+ 5. Privileged ISA Committee
