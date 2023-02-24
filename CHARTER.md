@@ -13,7 +13,7 @@ The M-mode Isolation TG will deliver a Priviledged ISA extension that provides M
 
 The following items are presently not planned to be delivered as part of this work:
 
- 1. Domain (AKA World) isolation within a Hart and within an SoC
+ 1. Domain (AKA World) isolation within a Hart and within an SoC.
 
 To achieve its goals, the M-mode Isolation TG will interact with the following groups:
 
