@@ -4,7 +4,7 @@ The M-mode Isolation Task Group is exploring how to better support multiple M-mo
 
 The current solution to M-mode Isolation is to de-privilege M-mode software to a lower-privilege mode such as S-mode or U-mode. De-privileging can be burdensome for software developers and can create unacceptable performance overheads due to limitiations of available functionality in those modes vs. M-mode. Alternative solutions or improvements to the current solution (e.g., improvements in S-mode to reduce functionality differences between M-mode and S-mode) will be explored. Potential use cases, requirements, and assumptions will be collected and analyzed. The M-mode Isolation TG will develop a solution to these use cases and requirements in the form of one or more privileged ISA extensions. The solution shall scale from low-end microcontrollers (RVM profile) up to high-end applications processors (RVA profile). 
 
-Extending isolation to the SoC is outside of the scope of this TG. However the solution proposed by this TG could depend on the anticipated RISC-V SoC domain/world isolation proposal. The solution proposed by the M-mode Isolation TG shall be consistent with the overall RISC-V Security Model.
+At this time, a separate proposal to provide domain/world isolation within a hart and extend it to the SoC is anticipated. Such a proposal is currently outside of the scope of this TG although that might change going forward. The solution proposed by the M-mode Isolation TG will likely depend on the anticipated domain/world isolation proposal. Additionally, the solution proposed by the M-mode Isolation TG shall be consistent with the overall RISC-V Security Model.
 
 To achieve its goals, the M-mode Isolation TG will interact with the following groups:
 
@@ -13,3 +13,4 @@ To achieve its goals, the M-mode Isolation TG will interact with the following g
  3. Trusted Computing SIG
  4. AP-TEE TG
  5. Privileged ISA Committee
+ 6. Potential TG for domain/world isolation
